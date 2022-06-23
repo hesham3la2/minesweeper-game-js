@@ -3,7 +3,7 @@ const levels = {
     rows: 9,
     cols: 9,
     numOfMines: 10,
-    timeout: 10,
+    timeout: 99,
   },
 };
 
@@ -164,6 +164,7 @@ function start(level) {
   selectedLevel = level || levels.easy;
   board = Array(selectedLevel.rows * selectedLevel.cols).fill(0);
   let mines = selectedLevel.numOfMines;
+  gameover = false;
 
   while (mines) {
     const random = Math.floor(
