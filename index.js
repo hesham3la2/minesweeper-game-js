@@ -3,15 +3,17 @@ const levels = {
     rows: 9,
     cols: 9,
     numOfMines: 10,
-    timeout: 99,
+    timeout: 10,
   },
 };
 
 let selectedLevel;
 let timer;
 let board;
+let gameover = false;
 
 function stepDown() {
+  if (gameover) return;
   if (timer === 0) {
     document.querySelector('.emoji').innerHTML = '💩';
     document.querySelector('.board').classList.add('freeze');
@@ -34,7 +36,8 @@ function checkStatus() {
   });
   if (hasClosedCell) return;
   document.querySelector('.board').classList.add('freeze');
-  document.querySelector('.emoji').innerHTML = '💩';
+  document.querySelector('.emoji').innerHTML = '😎';
+  gameover = true;
 }
 
 function openCell(e) {
@@ -69,6 +72,7 @@ function openCell(e) {
       });
 
       document.querySelector('.emoji').innerHTML = '💩';
+      gameover = true;
 
       return;
 
