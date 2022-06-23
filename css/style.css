@@ -1,0 +1,129 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .container {
+  background-color: #374353;
+  padding: 10px;
+}
+
+.main .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #f4ddb2;
+  border: 1px solid #374353;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.main .header .counter {
+  color: #f4ddb2;
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  background-color: #374353;
+  border-radius: 5px;
+  min-width: 65px;
+}
+.main .header .counter i {
+  margin-right: 3px;
+  float: left;
+}
+.main .header .counter span {
+  float: right;
+}
+
+.main .header .emoji {
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  text-shadow: 0 0 5px black;
+  cursor: pointer;
+}
+
+.main .board {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  border-color: black white white black;
+  width: 272px;
+  color: #d34007;
+}
+
+.main .board .cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-color: white black black white;
+  background-color: silver;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .board .cell.selected {
+  background-color: #afafaf;
+  border-color: black white white black;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.freeze {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c-1 {
+  color: blue;
+}
+.c-2 {
+  color: green;
+}
+.c-3 {
+  color: darkred;
+}
+.c-4 {
+  color: purple;
+}
+.c-5 {
+  color: darkgoldenrod;
+}
+.c-6 {
+  color: black;
+}
+.c-7 {
+  color: red;
+}
+.c-8 {
+  color: violet;
+}
